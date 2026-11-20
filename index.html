@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ben Harrison</title>
+<meta name="description" content="Ben Harrison: host of Fieldwork, and AI workflows for small teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, unhurried, personal; a field notebook, not a résumé.
+   IDEA: "Fieldwork": the page behaves like a page from a naturalist's field journal at golden hour.
+   PICTURE: a wide wheat field under a low sun, rows of stalks running to the horizon.
+   COLOUR and TYPE: wheat gold dominant, loam brown-black ink, clear sky blue accent; Instrument Serif + Inter.
+   LAYOUT: name over the full-width field scene, then three plain sections (Fieldwork, Work, Contact) on paper, gold footer band. */
+:root{color-scheme:light dark;
+  --bg:light-dark(#fbf8f1,#14120e);
+  --ink:light-dark(#211b13,#f1eadb);
+  --soft:light-dark(#5d5244,#b9ad98);
+  --gold:light-dark(#e6b94a,#b8892a);
+  --gold2:light-dark(#d29f2f,#8f6a1e);
+  --sky:light-dark(#9cc7e4,#22344a);
+  --sky2:light-dark(#d9ecf6,#3b4f66);
+  --sun:light-dark(#fff3c4,#f3c86a);
+  --accent:light-dark(#1f6fa8,#8cc4ee);
+  --rule:light-dark(#e3dac8,#2e2a22)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 max(5vw,16px)}
+
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;min-height:60px}
+.mark{font:400 24px/1 "Instrument Serif",Georgia,serif;color:var(--ink);text-decoration:none}
+nav ul{display:flex;flex-wrap:wrap;gap:4px 18px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--soft);text-decoration:none;font-size:15px;display:inline-block;padding:10px 0}
+nav ul a:hover{color:var(--ink)}
+
+header{padding-top:clamp(36px,6vw,72px)}
+h1{font:400 clamp(56px,11vw,128px)/.95 "Instrument Serif",Georgia,serif;margin:0;letter-spacing:-.01em}
+.lede{font-size:clamp(17px,2vw,20px);max-width:36em;color:var(--soft);margin:18px 0 0;text-wrap:pretty}
+.scene{display:block;width:100%;height:clamp(220px,38vw,440px);margin-top:clamp(28px,4vw,48px)}
+.sunglow{animation:breathe 7s ease-in-out infinite;transform-origin:center}
+@keyframes breathe{50%{opacity:.75}}
+@media (prefers-reduced-motion:reduce){.sunglow{animation:none}html{scroll-behavior:auto}}
+
+section{padding:clamp(44px,6vw,88px) 0;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px clamp(24px,5vw,72px)}
+h2{font:400 clamp(32px,4.4vw,48px)/1.05 "Instrument Serif",Georgia,serif;margin:0;text-wrap:balance}
+h2 em{font-style:italic}
+.kicker{color:var(--soft);font-size:14px;margin:10px 0 0}
+.body p{margin:0 0 1em;max-width:62ch}
+.body p:last-child{margin-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:20px 0 0}
+.tags li{border:1px solid var(--rule);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--soft)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;margin-top:22px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold2)}
+
+.mail{font:400 clamp(28px,5vw,48px)/1.1 "Instrument Serif",Georgia,serif;color:var(--ink);text-decoration-color:var(--gold);text-decoration-thickness:2px;overflow-wrap:anywhere}
+.mail:hover{text-decoration-color:var(--accent)}
+
+footer{background:var(--gold);color:#211b13;padding:28px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px}
+
+@media(max-width:700px){.row{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top">Ben Harrison</a>
+    <ul>
+      <li><a href="#fieldwork">Fieldwork</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <h1>Ben Harrison</h1>
+    <p class="lede">I'm a Los Angeles–based host and builder. I have long conversations with interesting people about the mind, technology, and how to live, and I help small teams put AI to work.</p>
+  </div>
+
+  <svg class="scene" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMax slice" role="img" aria-label="A wheat field running to the horizon under a low sun">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--sky)"/>
+        <stop offset="1" stop-color="var(--sky2)"/>
+      </linearGradient>
+      <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="var(--sun)" stop-opacity=".9"/>
+        <stop offset="1" stop-color="var(--sun)" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--gold2)"/>
+        <stop offset=".35" stop-color="var(--gold)"/>
+        <stop offset="1" stop-color="var(--gold2)"/>
+      </linearGradient>
+      <path id="stalk" d="M0 0 q2 -22 1 -44" fill="none" stroke="var(--gold2)" stroke-width="2" stroke-linecap="round"/>
+    </defs>
+    <rect width="1200" height="440" fill="url(#sky)"/>
+    <circle class="sunglow" cx="860" cy="210" r="170" fill="url(#glow)"/>
+    <circle cx="860" cy="210" r="46" fill="var(--sun)"/>
+    <!-- distant hills -->
+    <path d="M0 236 C160 206 300 222 430 214 S700 196 820 214 S1060 226 1200 206 V440 H0Z" fill="var(--gold2)" opacity=".55"/>
+    <!-- field -->
+    <path d="M0 250 C240 238 520 244 760 240 S1080 236 1200 244 V440 H0Z" fill="url(#field)"/>
+    <!-- furrows converging to a vanishing point -->
+    <g stroke="var(--gold2)" stroke-width="1.4" opacity=".55" id="rows"></g>
+    <!-- foreground stalks -->
+    <g id="stalks"></g>
+  </svg>
+</header>
+
+<main class="wrap">
+  <section id="fieldwork">
+    <div class="row">
+      <div>
+        <h2><em>Fieldwork</em> with Ben Harrison</h2>
+        <p class="kicker">Podcast and YouTube</p>
+      </div>
+      <div class="body">
+        <p>Long-form conversations with people whose work I find fascinating: artists, psychologists, philosophers, scientists, and builders. Less interview, more exploration, following the ideas wherever they actually lead.</p>
+        <p>The questions I keep coming back to are about consciousness, meaning, how the psyche works, and what technology is doing to all of it.</p>
+        <ul class="tags">
+          <li>Consciousness</li><li>Depth psychology</li><li>Art</li><li>AI and technology</li><li>Living well</li>
+        </ul>
+        <p class="status">First episodes coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="row">
+      <div>
+        <h2>AI workflows for small teams</h2>
+        <p class="kicker">Consulting</p>
+      </div>
+      <div class="body">
+        <p>I help small businesses and finance firms get real use out of AI. That means custom Claude projects and assistants, prompt systems built around how your team already works, and moving existing tools onto better setups.</p>
+        <p>I studied computer science at Columbia and worked in financial services at J.P. Morgan, so I know both the technology and the day-to-day of a busy desk. I'd rather price on outcomes than hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="row">
+      <div>
+        <h2>Say hello</h2>
+        <p class="kicker">Guests, projects, or just a good conversation</p>
+      </div>
+      <div class="body">
+        <a class="mail" href="mailto:ben@benharrison.io">ben@benharrison.io</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Ben Harrison · Los Angeles</span>
+    <span>benharrison.io</span>
+  </div>
+</footer>
+
+<script>
+{
+  const NS = "http://www.w3.org/2000/svg";
+  const rows = document.getElementById("rows");
+  const vx = 860, vy = 246;
+  for (let i = -14; i <= 14; i++) {
+    const l = document.createElementNS(NS, "line");
+    l.setAttribute("x1", vx); l.setAttribute("y1", vy);
+    l.setAttribute("x2", vx + i * 150); l.setAttribute("y2", 440);
+    rows.appendChild(l);
+  }
+  const stalks = document.getElementById("stalks");
+  let seed = 7;
+  const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < 90; i++) {
+    const x = rnd() * 1220 - 10, y = 400 + rnd() * 50, s = 0.8 + rnd() * 0.9, tilt = -8 + rnd() * 16;
+    const g = document.createElementNS(NS, "g");
+    g.setAttribute("transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${tilt.toFixed(1)}) scale(${s.toFixed(2)})`);
+    g.innerHTML = '<use href="#stalk"/><ellipse cx="1" cy="-50" rx="3.2" ry="9" fill="var(--gold2)"/>';
+    stalks.appendChild(g);
+  }
+}
+</script>
+</body>
+</html>
